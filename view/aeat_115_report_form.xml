@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!--The COPYRIGHT file at the top level of this repository
+contains the full copyright notices and license terms. -->
+<form col="6">
+    <label name="company_surname"/>
+    <field name="company_surname" colspan="2"/>
+    <label name="company_name"/>
+    <field name="company_name" colspan="2"/>
+
+    <label name="type"/>
+    <field name="type"/>
+    <label name="year"/>
+    <field name="year"/>
+    <label name="period"/>
+    <field name="period"/>
+
+    <separator id="aeat115" string="Settlement" colspan="6"/>
+    <label name="parties" colspan="5"/>
+    <field name="parties"/>
+    <label name="withholdings_payments_base" colspan="5"/>
+    <field name="withholdings_payments_base"/>
+    <label name="withholdings_payments_amount" colspan="5"/>
+    <field name="withholdings_payments_amount"/>
+
+    <separator id="result" string="Result" colspan="6"/>
+    <label name="to_deduce" colspan="5"/>
+    <field name="to_deduce"/>
+    <label name="result" colspan="5"/>
+    <field name="result"/>
+
+    <separator id="complementary" string="Complementary" colspan="6"/>
+    <label name="complementary_declaration"/>
+    <field name="complementary_declaration" colspan="2"/>
+    <label name="previous_declaration_receipt"/>
+    <field name="previous_declaration_receipt" colspan="2"/>
+
+    <separator id="bank" string="Bank Information" colspan="6"/>
+    <label name="bank_account"/>
+    <field name="bank_account" colspan="5"/>
+
+    <separator id="115footer" colspan="6"/>
+    <group id="state" colspan="3" col="6">
+        <label name="state"/>
+        <field name="state"/>
+        <label name="calculation_date"/>
+        <field name="calculation_date"/>
+        <label name="file_"/>
+        <field name="file_"/>
+        <field name="filename" invisible="1"/>
+    </group>
+    <group id="buttons" colspan="3">
+        <button name="draft"/>
+        <button name="calculate"/>
+        <button name="process"/>
+        <button name="cancel"/>
+    </group>
+</form>

@@ -1,0 +1,402 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+#, fuzzy
+msgctxt "field:aeat.115.mapping,aeat115_field:"
+msgid "Field"
+msgstr "Camp"
+
+#, fuzzy
+msgctxt "field:aeat.115.mapping,code:"
+msgid "Tax Code"
+msgstr "Codi Tributari"
+
+#, fuzzy
+msgctxt "field:aeat.115.mapping,code_by_companies:"
+msgid "Tax Code"
+msgstr "Codi Tributari"
+
+#, fuzzy
+msgctxt "field:aeat.115.mapping,company:"
+msgid "Company"
+msgstr "Companyia"
+
+#, fuzzy
+msgctxt "field:aeat.115.mapping,template:"
+msgid "Template"
+msgstr "Plantilla"
+
+#, fuzzy
+msgctxt "field:aeat.115.mapping-account.tax.code,code:"
+msgid "Tax Code"
+msgstr "Codi Tributari"
+
+#, fuzzy
+msgctxt "field:aeat.115.mapping-account.tax.code,mapping:"
+msgid "Mapping"
+msgstr "Cartografia"
+
+#, fuzzy
+msgctxt "field:aeat.115.mapping-account.tax.code.template,code:"
+msgid "Tax Code Template"
+msgstr "Plantilla de codi fiscal"
+
+#, fuzzy
+msgctxt "field:aeat.115.mapping-account.tax.code.template,mapping:"
+msgid "Mapping"
+msgstr "Cartografia"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,bank_account:"
+msgid "Bank Account"
+msgstr "Compte bancari"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,calculation_date:"
+msgid "Calculation Date"
+msgstr "Data de càlcul"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,company:"
+msgid "Company"
+msgstr "Companyia"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,company_name:"
+msgid "Company Name"
+msgstr "Nom de la companyia"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,company_party:"
+msgid "Company Party"
+msgstr "Festa d'empresa"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,company_surname:"
+msgid "Company Surname"
+msgstr "Cognom de l'empresa"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,company_vat:"
+msgid "VAT"
+msgstr "IVA"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,complementary_declaration:"
+msgid "Complementary Declaration"
+msgstr "Declaració complementària"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,currency:"
+msgid "Currency"
+msgstr "Moneda"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,file_:"
+msgid "File"
+msgstr "Dossier"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,filename:"
+msgid "File Name"
+msgstr "Nom de l'arxiu"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,parties:"
+msgid "Parties"
+msgstr "Festa"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,period:"
+msgid "Period"
+msgstr "Període"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,previous_declaration_receipt:"
+msgid "Previous Declaration Receipt"
+msgstr "Rebut de declaració prèvia"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,result:"
+msgid "Result"
+msgstr "Resultat"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,state:"
+msgid "State"
+msgstr "Estat"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,to_deduce:"
+msgid "To Deduce"
+msgstr "Deduir"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,type:"
+msgid "Declaration Type"
+msgstr "Tipus de declaració"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,withholdings_payments_amount:"
+msgid "Withholding and Payments"
+msgstr "Retencions i pagaments"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,withholdings_payments_base:"
+msgid "Withholding and Payments Base"
+msgstr "Base de retencions i pagaments"
+
+#, fuzzy
+msgctxt "field:aeat.115.report,year:"
+msgid "Year"
+msgstr "Curs"
+
+#, fuzzy
+msgctxt "field:aeat.115.template.mapping,aeat115_field:"
+msgid "Field"
+msgstr "Camp"
+
+#, fuzzy
+msgctxt "field:aeat.115.template.mapping,code:"
+msgid "Tax Code Template"
+msgstr "Plantilla de codi fiscal"
+
+#, fuzzy
+msgctxt "help:aeat.115.report,to_deduce:"
+msgid ""
+"Exclusively in case of complementary self-assessment.Results to be entered "
+"from previous self-assessments for the same concept, year and period"
+msgstr ""
+"Exclusivament en cas d'autoavaluació complementària. Resultats que s'han "
+"d'introduir d'autoliquidacions prèvies pel mateix concepte, any i període."
+
+#, fuzzy
+msgctxt "model:aeat.115.mapping,name:"
+msgid "AEAT 115 TaxCode Mapping"
+msgstr "Mapeig del codi fiscal AEAT 115"
+
+#, fuzzy
+msgctxt "model:aeat.115.mapping-account.tax.code,name:"
+msgid "AEAT 115 TaxCode Mapping Codes Relation"
+msgstr "AEAT 115 Relació de codis de mapatge de codis fiscals"
+
+#, fuzzy
+msgctxt "model:aeat.115.mapping-account.tax.code.template,name:"
+msgid "AEAT 115 TaxCode Mapping Codes Relation"
+msgstr "AEAT 115 Relació de codis de mapatge de codis fiscals"
+
+#, fuzzy
+msgctxt "model:aeat.115.report,name:"
+msgid "AEAT 115 Report"
+msgstr "Informe AEAT 115"
+
+#, fuzzy
+msgctxt "model:aeat.115.template.mapping,name:"
+msgid "AEAT 115 TemplateTaxCode Mapping"
+msgstr "AEAT 115 Plantilla TaxCode Mapping"
+
+#, fuzzy
+msgctxt "model:ir.action,name:act_aeat_115_mapping"
+msgid "AEAT 115 mapping"
+msgstr "Cartografia AEAT 115"
+
+#, fuzzy
+msgctxt "model:ir.action,name:act_aeat_115_report"
+msgid "AEAT 115 Report"
+msgstr "Informe AEAT 115"
+
+#, fuzzy
+msgctxt "model:ir.message,text:msg_invalid_currency"
+msgid "Currency in AEAT 115 report \"%(name)s\" must be Euro."
+msgstr "La moneda de l'informe AEAT 115 \"%(name)s\" ha de ser l'euro."
+
+#, fuzzy
+msgctxt "model:ir.message,text:msg_invalid_year"
+msgid "The year \"%(year)s\" is not valid."
+msgstr "L'any \"%(year)s\" no és vàlid."
+
+#, fuzzy
+msgctxt "model:ir.message,text:msg_number_of_parties_to_hight"
+msgid "The numbers of parties exeed the space reserved."
+msgstr "El nombre de partits supera l'espai reservat."
+
+#, fuzzy
+msgctxt "model:ir.model.button,string:aeat_115_report_calculate_button"
+msgid "Calculate"
+msgstr "Calcular"
+
+#, fuzzy
+msgctxt "model:ir.model.button,string:aeat_115_report_cancel_button"
+msgid "Cancel"
+msgstr "Cancel · lar"
+
+#, fuzzy
+msgctxt "model:ir.model.button,string:aeat_115_report_draft_button"
+msgid "Draft"
+msgstr "Esborrany"
+
+#, fuzzy
+msgctxt "model:ir.model.button,string:aeat_115_report_process_button"
+msgid "Process"
+msgstr "Procés"
+
+#, fuzzy
+msgctxt "model:ir.rule.group,name:rule_group_aeat115"
+msgid "User in company"
+msgstr "Usuari a l'empresa"
+
+#, fuzzy
+msgctxt "model:ir.rule.group,name:rule_group_aeat115_mapping"
+msgid "User in company"
+msgstr "Usuari a l'empresa"
+
+#, fuzzy
+msgctxt "model:ir.ui.menu,name:menu_aeat_115_mapping"
+msgid "AEAT 115 Mapping"
+msgstr "AEAT 115 Cartografia"
+
+#, fuzzy
+msgctxt "model:ir.ui.menu,name:menu_aeat_115_report"
+msgid "AEAT 115 Report"
+msgstr "Informe AEAT 115"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "April"
+msgstr "Abril"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "August"
+msgstr "Agost"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "December"
+msgstr "desembre"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "February"
+msgstr "febrer"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "First quarter"
+msgstr "Primer quart"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "Fourth quarter"
+msgstr "Quart trimestre"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "January"
+msgstr "gener"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "July"
+msgstr "juliol"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "June"
+msgstr "juny"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "March"
+msgstr "març"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "May"
+msgstr "maig"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "November"
+msgstr "de novembre"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "October"
+msgstr "Octubre"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "Second quarter"
+msgstr "Segon trimestre"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "September"
+msgstr "setembre"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,period:"
+msgid "Third quarter"
+msgstr "Tercer trimestre"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,state:"
+msgid "Calculated"
+msgstr "Calculat"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,state:"
+msgid "Cancelled"
+msgstr "Cancel·lat"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,state:"
+msgid "Done"
+msgstr "Fet"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,state:"
+msgid "Draft"
+msgstr "Esborrany"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,type:"
+msgid "Direct incomes in account"
+msgstr "Ingressos directes en compte"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,type:"
+msgid "Income"
+msgstr "Ingressos"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,type:"
+msgid "Income on CCT"
+msgstr "Ingressos per CCT"
+
+#, fuzzy
+msgctxt "selection:aeat.115.report,type:"
+msgid "Negative"
+msgstr "Negatiu"
+
+#, fuzzy
+msgctxt "view:aeat.115.report:"
+msgid "Bank Information"
+msgstr "Informació bancària"
+
+#, fuzzy
+msgctxt "view:aeat.115.report:"
+msgid "Complementary"
+msgstr "Complementari"
+
+#, fuzzy
+msgctxt "view:aeat.115.report:"
+msgid "Result"
+msgstr "Resultat"
+
+#, fuzzy
+msgctxt "view:aeat.115.report:"
+msgid "Settlement"
+msgstr "Assentament"
