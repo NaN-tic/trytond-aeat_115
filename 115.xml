@@ -6,12 +6,12 @@ contains the full copyright notices and license terms. -->
         <!-- [02] -->
         <record model="aeat.115.template.mapping" id="aeat_115_mapping_code_02">
             <field name="aeat115_field"
-                search="[('name', '=', 'withholdings_payments_base')]"/>
+                search="[('name', '=', 'withholdings_payments_base'), ('module', '=', 'aeat_115')]"/>
         </record>
         <!-- [03] -->
         <record model="aeat.115.template.mapping" id="aeat_115_mapping_code_03">
             <field name="aeat115_field"
-                search="[('name', '=', 'withholdings_payments_amount')]"/>
+                search="[('name', '=', 'withholdings_payments_amount'), ('module', '=', 'aeat_115')]"/>
         </record>
     </data>
 </tryton>
