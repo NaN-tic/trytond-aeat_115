@@ -20,29 +20,13 @@ _DEPENDS = ['state']
 _ZERO = Decimal("0.0")
 
 
-def remove_accents(unicode_string):
-    str_ = str if sys.version_info < (3, 0) else bytes
-    unicode_ = str if sys.version_info < (3, 0) else str
-    if isinstance(unicode_string, str_):
-        unicode_string_bak = unicode_string
-        try:
-            unicode_string = unicode_string_bak.decode('iso-8859-1')
-        except UnicodeDecodeError:
-            try:
-                unicode_string = unicode_string_bak.decode('utf-8')
-            except UnicodeDecodeError:
-                return unicode_string_bak
-
-    if not isinstance(unicode_string, unicode_):
-        return unicode_string
-
-    unicode_string_nfd = ''.join(
-        (c for c in unicodedata.normalize('NFD', unicode_string)
-            if (unicodedata.category(c) != 'Mn'
+def remove_accents(text):
+    return ''.join(c for c in unicodedata.normalize('NFD', text)
+        if (unicodedata.category(c) != 'Mn'
                 or c in ('\\u0327', '\\u0303'))  # Avoids normalize ç and ñ
-            ))
+        )
     # It converts nfd to nfc to allow unicode.decode()
-    return unicodedata.normalize('NFC', unicode_string_nfd)
+    #return unicodedata.normalize('NFC', unicode_string_nfd)
 
 
 class TemplateTaxCodeRelation(ModelSQL):
@@ -247,7 +231,12 @@ class Report(Workflow, ModelSQL, ModelView):
     company_vat = fields.Char('VAT')
     company_surname = fields.Char('Company Surname')
     company_name = fields.Char('Company Name')
-    year = fields.Integer("Year", required=True, states={
+    year = fields.Integer("Year", required=True,
+        domain=[
+            ('year', '>=', 1000),
+            ('year', '<=', 9999)
+            ],
+        states={
             'readonly': Eval('state').in_(['done', 'calculated']),
             }, depends=_DEPENDS)
     period = fields.Selection([
@@ -270,7 +259,11 @@ class Report(Workflow, ModelSQL, ModelView):
             ], 'Period', required=True, sort=False, states={
                 'readonly': Eval('state').in_(['done', 'calculated']),
                 }, depends=_DEPENDS)
-    parties = fields.Integer("Parties")
+    parties = fields.Integer("Parties", required=True,
+        domain=[
+            ('parties', '>', 0),
+            ('parties', '<=', 999999999999999),
+            ])
     withholdings_payments_base = fields.Numeric(
         'Withholding and Payments Base', digits=(15, 2))
     withholdings_payments_amount = fields.Numeric('Withholding and Payments',
@@ -392,17 +385,6 @@ class Report(Workflow, ModelSQL, ModelView):
         if company_id:
             return Company(company_id).party.id
 
-    def pre_validate(self):
-        super().pre_validate()
-        self.check_year_digits()
-
-    @fields.depends('year')
-    def check_year_digits(self):
-        if self.year and len(str(self.year)) != 4:
-            raise UserError(
-                gettext('aeat_115.msg_invalid_year',
-                    year=self.year))
-
     @fields.depends('company')
     def on_change_with_company_party(self, name=None):
         if self.company:
@@ -429,24 +411,6 @@ class Report(Workflow, ModelSQL, ModelView):
     def get_filename(self, name):
         return 'aeat115-%s-%s.txt' % (
             self.year, self.period)
-
-    @classmethod
-    def validate(cls, reports):
-        for report in reports:
-            report.check_euro()
-            report.check_party_length()
-
-    def check_euro(self):
-        if (self.currency and self.company
-                and self.currency.code != self.company.currency.code):
-            raise UserError(gettext('aeat_115.msg_invalid_currency',
-                name=self.rec_name,
-                ))
-
-    def check_party_length(self):
-        if self.parties and self.parties > 15:
-            raise UserError(gettext(
-                    'aeat_115.msg_number_of_parties_to_hight'))
 
     @classmethod
     @ModelView.button

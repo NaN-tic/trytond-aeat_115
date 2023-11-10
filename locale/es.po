@@ -213,16 +213,6 @@ msgid "Currency in AEAT 115 report \"%(name)s\" must be Euro."
 msgstr "La moneda del informe AEAT 115 \"%(name)s\" debe ser el euro."
 
 #, fuzzy
-msgctxt "model:ir.message,text:msg_invalid_year"
-msgid "The year \"%(year)s\" is not valid."
-msgstr "El año \"%(año)s\" no es válido."
-
-#, fuzzy
-msgctxt "model:ir.message,text:msg_number_of_parties_to_hight"
-msgid "The numbers of parties exeed the space reserved."
-msgstr "El número de partidos superó el espacio reservado."
-
-#, fuzzy
 msgctxt "model:ir.model.button,string:aeat_115_report_calculate_button"
 msgid "Calculate"
 msgstr "Calcular"
