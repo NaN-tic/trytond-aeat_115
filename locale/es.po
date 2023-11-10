@@ -2,167 +2,134 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
-#, fuzzy
 msgctxt "field:aeat.115.mapping,aeat115_field:"
 msgid "Field"
 msgstr "Campo"
 
-#, fuzzy
 msgctxt "field:aeat.115.mapping,code:"
 msgid "Tax Code"
-msgstr "Código de impuestos"
+msgstr "Código impuestos"
 
-#, fuzzy
 msgctxt "field:aeat.115.mapping,code_by_companies:"
 msgid "Tax Code"
-msgstr "Código de impuestos"
+msgstr "Código impuestos"
 
-#, fuzzy
 msgctxt "field:aeat.115.mapping,company:"
 msgid "Company"
 msgstr "Compañía"
 
-#, fuzzy
 msgctxt "field:aeat.115.mapping,template:"
 msgid "Template"
 msgstr "Plantilla"
 
-#, fuzzy
 msgctxt "field:aeat.115.mapping-account.tax.code,code:"
 msgid "Tax Code"
-msgstr "Código de impuestos"
+msgstr "Código impuestos"
 
-#, fuzzy
 msgctxt "field:aeat.115.mapping-account.tax.code,mapping:"
 msgid "Mapping"
-msgstr "Cartografía"
+msgstr "Mapeo"
 
-#, fuzzy
 msgctxt "field:aeat.115.mapping-account.tax.code.template,code:"
 msgid "Tax Code Template"
-msgstr "Plantilla de código fiscal"
+msgstr "Plantilla de código impuesto"
 
-#, fuzzy
 msgctxt "field:aeat.115.mapping-account.tax.code.template,mapping:"
 msgid "Mapping"
-msgstr "Cartografía"
+msgstr "Mapeo"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,bank_account:"
 msgid "Bank Account"
 msgstr "Cuenta bancaria"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,calculation_date:"
 msgid "Calculation Date"
-msgstr "Fecha de cálculo"
+msgstr "Fecha cálculo"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,company:"
 msgid "Company"
 msgstr "Compañía"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,company_name:"
 msgid "Company Name"
-msgstr "nombre de empresa"
+msgstr "Nombre"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,company_party:"
 msgid "Company Party"
-msgstr "Fiesta de empresa"
+msgstr "Tercero de la compañía"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,company_surname:"
 msgid "Company Surname"
-msgstr "Apellido de la empresa"
+msgstr "Razón social/Apellidos"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,company_vat:"
 msgid "VAT"
-msgstr "IVA"
+msgstr "CIF/NIF"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,complementary_declaration:"
 msgid "Complementary Declaration"
 msgstr "Declaración Complementaria"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,currency:"
 msgid "Currency"
-msgstr "Divisa"
+msgstr "Moneda"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,file_:"
 msgid "File"
-msgstr "Archivo"
+msgstr "Fichero"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,filename:"
 msgid "File Name"
-msgstr "Nombre del archivo"
+msgstr "Nombre del fichero"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,parties:"
 msgid "Parties"
-msgstr "Fiestas"
+msgstr "Terceros"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,period:"
 msgid "Period"
 msgstr "Período"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,previous_declaration_receipt:"
 msgid "Previous Declaration Receipt"
-msgstr "Recibo de Declaración Anterior"
+msgstr "Justificante declaración anterior"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,result:"
 msgid "Result"
 msgstr "Resultado"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,state:"
 msgid "State"
 msgstr "Estado"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,to_deduce:"
 msgid "To Deduce"
-msgstr "Deducir"
+msgstr "A deducir"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,type:"
 msgid "Declaration Type"
 msgstr "Tipo de declaración"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,withholdings_payments_amount:"
 msgid "Withholding and Payments"
-msgstr "Retenciones y Pagos"
+msgstr "Retenciones e ingresos"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,withholdings_payments_base:"
 msgid "Withholding and Payments Base"
-msgstr "Base de Retenciones y Pagos"
+msgstr "Base de Retenciones e ingresos"
 
-#, fuzzy
 msgctxt "field:aeat.115.report,year:"
 msgid "Year"
 msgstr "Año"
 
-#, fuzzy
 msgctxt "field:aeat.115.template.mapping,aeat115_field:"
 msgid "Field"
 msgstr "Campo"
 
-#, fuzzy
 msgctxt "field:aeat.115.template.mapping,code:"
 msgid "Tax Code Template"
-msgstr "Plantilla de código fiscal"
+msgstr "Plantilla de código impuestos"
 
-#, fuzzy
 msgctxt "help:aeat.115.report,to_deduce:"
 msgid ""
 "Exclusively in case of complementary self-assessment.Results to be entered "
@@ -172,222 +139,179 @@ msgstr ""
 "resultados de autoliquidaciones anteriores por el mismo concepto, año y "
 "período."
 
-#, fuzzy
 msgctxt "model:aeat.115.mapping,name:"
 msgid "AEAT 115 TaxCode Mapping"
-msgstr "Mapeo del Código Tributario AEAT 115"
+msgstr "Mapeo códigos de impuestos AEAT 115"
 
-#, fuzzy
 msgctxt "model:aeat.115.mapping-account.tax.code,name:"
 msgid "AEAT 115 TaxCode Mapping Codes Relation"
-msgstr "AEAT 115 Relación de Códigos de Mapeo de TaxCode"
+msgstr "Relación Mapeo AEAT 115 Codigos de impuestos"
 
-#, fuzzy
 msgctxt "model:aeat.115.mapping-account.tax.code.template,name:"
 msgid "AEAT 115 TaxCode Mapping Codes Relation"
-msgstr "AEAT 115 Relación de Códigos de Mapeo de TaxCode"
+msgstr "Relación Mapeo AEAT 115 Codigos de impuestos"
 
-#, fuzzy
 msgctxt "model:aeat.115.report,name:"
 msgid "AEAT 115 Report"
 msgstr "Informe AEAT 115"
 
-#, fuzzy
 msgctxt "model:aeat.115.template.mapping,name:"
 msgid "AEAT 115 TemplateTaxCode Mapping"
 msgstr "AEAT 115 Mapeo de TemplateTaxCode"
+msgstr "Mapeo plantillas codigos de impuestos AEAT 115"
 
-#, fuzzy
 msgctxt "model:ir.action,name:act_aeat_115_mapping"
 msgid "AEAT 115 mapping"
 msgstr "Mapeo AEAT 115"
 
-#, fuzzy
 msgctxt "model:ir.action,name:act_aeat_115_report"
 msgid "AEAT 115 Report"
 msgstr "Informe AEAT 115"
 
-#, fuzzy
 msgctxt "model:ir.message,text:msg_invalid_currency"
 msgid "Currency in AEAT 115 report \"%(name)s\" must be Euro."
 msgstr "La moneda del informe AEAT 115 \"%(name)s\" debe ser el euro."
 
-#, fuzzy
 msgctxt "model:ir.model.button,string:aeat_115_report_calculate_button"
 msgid "Calculate"
-msgstr "Calcular"
+msgstr "Calcula"
 
-#, fuzzy
 msgctxt "model:ir.model.button,string:aeat_115_report_cancel_button"
 msgid "Cancel"
-msgstr "Cancelar"
+msgstr "Cancela"
 
-#, fuzzy
 msgctxt "model:ir.model.button,string:aeat_115_report_draft_button"
 msgid "Draft"
 msgstr "Borrador"
 
-#, fuzzy
 msgctxt "model:ir.model.button,string:aeat_115_report_process_button"
 msgid "Process"
 msgstr "Proceso"
 
-#, fuzzy
 msgctxt "model:ir.rule.group,name:rule_group_aeat115"
 msgid "User in company"
-msgstr "Usuario en empresa"
+msgstr "Usuario en la compañía"
 
-#, fuzzy
 msgctxt "model:ir.rule.group,name:rule_group_aeat115_mapping"
 msgid "User in company"
-msgstr "Usuario en empresa"
+msgstr "Usuario en la compañía"
 
-#, fuzzy
 msgctxt "model:ir.ui.menu,name:menu_aeat_115_mapping"
 msgid "AEAT 115 Mapping"
 msgstr "Mapeo AEAT 115"
 
-#, fuzzy
 msgctxt "model:ir.ui.menu,name:menu_aeat_115_report"
 msgid "AEAT 115 Report"
 msgstr "Informe AEAT 115"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "April"
 msgstr "Abril"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "August"
 msgstr "Agosto"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "December"
 msgstr "Diciembre"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "February"
 msgstr "Febrero"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "First quarter"
-msgstr "Primer cuarto"
+msgstr "Primer trimestre"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "Fourth quarter"
 msgstr "Cuarto trimestre"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "January"
 msgstr "Enero"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "July"
 msgstr "Julio"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "June"
 msgstr "Junio"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "March"
 msgstr "Marzo"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "May"
-msgstr "Puede"
+msgstr "Mayo"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "November"
 msgstr "Noviembre"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "October"
 msgstr "Octubre"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "Second quarter"
-msgstr "Segundo cuarto"
+msgstr "Segundo trimestre"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "September"
 msgstr "Septiembre"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,period:"
 msgid "Third quarter"
-msgstr "Tercer cuarto"
+msgstr "Tercer trimestre"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,state:"
 msgid "Calculated"
 msgstr "Calculado"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,state:"
 msgid "Cancelled"
 msgstr "Cancelado"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,state:"
 msgid "Done"
-msgstr "Hecho"
+msgstr "Relizado"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,state:"
 msgid "Draft"
 msgstr "Borrador"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,type:"
 msgid "Direct incomes in account"
-msgstr "Ingresos directos en cuenta"
+msgstr "Domiciliación del importe en CC"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,type:"
 msgid "Income"
 msgstr "Ingreso"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,type:"
 msgid "Income on CCT"
 msgstr "Ingresos en CCT"
 
-#, fuzzy
 msgctxt "selection:aeat.115.report,type:"
 msgid "Negative"
 msgstr "Negativo"
 
-#, fuzzy
 msgctxt "view:aeat.115.report:"
 msgid "Bank Information"
 msgstr "Información bancaria"
 
-#, fuzzy
 msgctxt "view:aeat.115.report:"
 msgid "Complementary"
 msgstr "Complementario"
 
-#, fuzzy
 msgctxt "view:aeat.115.report:"
 msgid "Result"
 msgstr "Resultado"
 
-#, fuzzy
 msgctxt "view:aeat.115.report:"
 msgid "Settlement"
-msgstr "Asentamiento"
+msgstr "Liquidación"
