@@ -157,7 +157,6 @@ msgstr "Informe AEAT 115"
 
 msgctxt "model:aeat.115.template.mapping,name:"
 msgid "AEAT 115 TemplateTaxCode Mapping"
-msgstr "AEAT 115 Mapeo de TemplateTaxCode"
 msgstr "Mapeo plantillas codigos de impuestos AEAT 115"
 
 msgctxt "model:ir.action,name:act_aeat_115_mapping"
