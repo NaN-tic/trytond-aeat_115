@@ -84,7 +84,7 @@ msgstr "Nom del fitxer"
 
 msgctxt "field:aeat.115.report,parties:"
 msgid "Parties"
-msgstr "Tercers"
+msgstr "Nº perceptors"
 
 msgctxt "field:aeat.115.report,period:"
 msgid "Period"
