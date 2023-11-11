@@ -16,7 +16,7 @@ msgstr "Código impuestos"
 
 msgctxt "field:aeat.115.mapping,company:"
 msgid "Company"
-msgstr "Compañía"
+msgstr "Empresa"
 
 msgctxt "field:aeat.115.mapping,template:"
 msgid "Template"
@@ -48,7 +48,7 @@ msgstr "Fecha cálculo"
 
 msgctxt "field:aeat.115.report,company:"
 msgid "Company"
-msgstr "Compañía"
+msgstr "Empresa"
 
 msgctxt "field:aeat.115.report,company_name:"
 msgid "Company Name"
@@ -56,7 +56,7 @@ msgstr "Nombre"
 
 msgctxt "field:aeat.115.report,company_party:"
 msgid "Company Party"
-msgstr "Tercero de la compañía"
+msgstr "Tercero de la empresa"
 
 msgctxt "field:aeat.115.report,company_surname:"
 msgid "Company Surname"
@@ -132,7 +132,7 @@ msgstr "Plantilla de código impuestos"
 
 msgctxt "help:aeat.115.report,to_deduce:"
 msgid ""
-"Exclusively in case of complementary self-assessment.Results to be entered "
+"Exclusively in case of complementary self-assessment. Results to be entered "
 "from previous self-assessments for the same concept, year and period"
 msgstr ""
 "Exclusivamente en caso de autoliquidación complementaria. Se introducirán "
@@ -189,11 +189,11 @@ msgstr "Proceso"
 
 msgctxt "model:ir.rule.group,name:rule_group_aeat115"
 msgid "User in company"
-msgstr "Usuario en la compañía"
+msgstr "Usuario en la empresa"
 
 msgctxt "model:ir.rule.group,name:rule_group_aeat115_mapping"
 msgid "User in company"
-msgstr "Usuario en la compañía"
+msgstr "Usuario en la empresa"
 
 msgctxt "model:ir.ui.menu,name:menu_aeat_115_mapping"
 msgid "AEAT 115 Mapping"
