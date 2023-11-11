@@ -76,15 +76,15 @@ msgstr "Moneda"
 
 msgctxt "field:aeat.115.report,file_:"
 msgid "File"
-msgstr "Fichero"
+msgstr "Archivo"
 
 msgctxt "field:aeat.115.report,filename:"
 msgid "File Name"
-msgstr "Nombre del fichero"
+msgstr "Nombre del archivo"
 
 msgctxt "field:aeat.115.report,parties:"
 msgid "Parties"
-msgstr "Terceros"
+msgstr "Nº perceptores"
 
 msgctxt "field:aeat.115.report,period:"
 msgid "Period"
