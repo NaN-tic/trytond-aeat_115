@@ -16,7 +16,7 @@ msgstr "Codi Impost"
 
 msgctxt "field:aeat.115.mapping,company:"
 msgid "Company"
-msgstr "Companyia"
+msgstr "Empresa"
 
 msgctxt "field:aeat.115.mapping,template:"
 msgid "Template"
@@ -48,7 +48,7 @@ msgstr "Data càlcul"
 
 msgctxt "field:aeat.115.report,company:"
 msgid "Company"
-msgstr "Companyia"
+msgstr "Empresa"
 
 msgctxt "field:aeat.115.report,company_name:"
 msgid "Company Name"
@@ -56,7 +56,7 @@ msgstr "Nom"
 
 msgctxt "field:aeat.115.report,company_party:"
 msgid "Company Party"
-msgstr "Tercer de la companyia"
+msgstr "Tercer de l'empresa"
 
 msgctxt "field:aeat.115.report,company_surname:"
 msgid "Company Surname"
@@ -132,10 +132,10 @@ msgstr "Plantilla de codi impostos"
 
 msgctxt "help:aeat.115.report,to_deduce:"
 msgid ""
-"Exclusively in case of complementary self-assessment.Results to be entered "
+"Exclusively in case of complementary self-assessment. Results to be entered "
 "from previous self-assessments for the same concept, year and period"
 msgstr ""
-"Exclusivament en cas d'autoavaluació complementària. Resultats que s'han "
+"Exclusivament en cas d'autoliquidació complementària. Resultats que s'han "
 "d'introduir d'autoliquidacions prèvies pel mateix concepte, any i període."
 
 msgctxt "model:aeat.115.mapping,name:"

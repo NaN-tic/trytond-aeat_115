@@ -269,7 +269,7 @@ class Report(Workflow, ModelSQL, ModelView):
     withholdings_payments_amount = fields.Numeric('Withholding and Payments',
         digits=(15, 2))
     to_deduce = fields.Numeric("To Deduce", digits=(15, 2),
-        help="Exclusively in case of complementary self-assessment."
+        help="Exclusively in case of complementary self-assessment. "
         "Results to be entered from previous self-assessments for the same "
         "concept, year and period")
     result = fields.Function(fields.Numeric('Result', digits=(15, 2)),
