@@ -201,7 +201,7 @@ msgstr "Mapeo AEAT 115"
 
 msgctxt "model:ir.ui.menu,name:menu_aeat_115_report"
 msgid "AEAT 115 Report"
-msgstr "Informe AEAT 115"
+msgstr "Informes AEAT 115"
 
 msgctxt "selection:aeat.115.report,period:"
 msgid "April"
