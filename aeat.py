@@ -9,7 +9,7 @@ from retrofix import aeat115
 from retrofix.record import Record, write as retrofix_write
 from trytond.model import Workflow, ModelSQL, ModelView, fields, Unique
 from trytond.pool import Pool, PoolMeta
-from trytond.pyson import Eval, Bool
+from trytond.pyson import Eval, Bool, If
 from trytond.i18n import gettext
 from trytond.exceptions import UserError
 from trytond.transaction import Transaction
@@ -259,10 +259,14 @@ class Report(Workflow, ModelSQL, ModelView):
             ], 'Period', required=True, sort=False, states={
                 'readonly': Eval('state').in_(['done', 'calculated']),
                 }, depends=_DEPENDS)
-    parties = fields.Integer("Parties", required=True,
+    parties = fields.Integer("Parties",
         domain=[
-            ('parties', '>', 0),
-            ('parties', '<=', 999999999999999),
+            If(Eval('withholdings_payments_amount', 0) != 0,
+                [
+                    ('parties', '>', 0),
+                    ('parties', '<=', 99999999),
+                    ],
+                ('parties', '=', 0)),
             ])
     withholdings_payments_base = fields.Numeric(
         'Withholding and Payments Base', digits=(15, 2))
@@ -344,14 +348,6 @@ class Report(Workflow, ModelSQL, ModelView):
     def default_company():
         return Transaction().context.get('company')
 
-    #@classmethod
-    #def default_company_surnname(cls):
-    #    pool = Pool()
-    #    Company = pool.get('company.company')
-    #    company_id = cls.default_company()
-    #    if company_id:
-    #        return Company(company_id).party.name.upper()
-
     @classmethod
     def default_company_vat(cls):
         pool = Pool()
@@ -364,6 +360,10 @@ class Report(Workflow, ModelSQL, ModelView):
             if vat_code and vat_code.startswith('ES'):
                 return vat_code[2:]
             return vat_code
+
+    @staticmethod
+    def default_parties():
+        return 0
 
     @staticmethod
     def default_withholdings_payments_base():
