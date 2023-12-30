@@ -3,15 +3,18 @@
 
 from trytond.pool import Pool
 from . import aeat
+from . import invoice
 
 
 def register():
     Pool.register(
-        aeat.Report,
         aeat.TemplateTaxCodeMapping,
         aeat.TemplateTaxCodeRelation,
         aeat.TaxCodeMapping,
         aeat.TaxCodeRelation,
+        aeat.Report,
+        aeat.Register,
+        invoice.Invoice,
         module='aeat_115', type_='model')
     Pool.register(
         aeat.CreateChart,

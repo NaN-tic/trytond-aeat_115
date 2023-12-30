@@ -3,8 +3,8 @@
 this repository contains the full copyright notices and license terms. -->
 <tryton>
     <data grouped="1">
-        <record model="ir.message" id="msg_invalid_currency">
-            <field name="text">Currency in AEAT 115 report "%(name)s" must be Euro.</field>
+        <record model="ir.message" id="msg_draft_cancel_invoice_in_115report">
+            <field name="text">The invoice "%(invoice)s" cannot be changed to cancel or draft becasue is in a AEAT115 report "%(report)s".</field>
         </record>
     </data>
 </tryton>
