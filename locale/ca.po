@@ -2,6 +2,10 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=utf-8\n"
 
+msgctxt "field:account.invoice,aeat115_register:"
+msgid "AEAT 115 Register"
+msgstr "Registre AEAT 115"
+
 msgctxt "field:aeat.115.mapping,aeat115_field:"
 msgid "Field"
 msgstr "Camp"
@@ -94,6 +98,10 @@ msgctxt "field:aeat.115.report,previous_declaration_receipt:"
 msgid "Previous Declaration Receipt"
 msgstr "Justificant declaració prèvia"
 
+msgctxt "field:aeat.115.report,registers:"
+msgid "Registers"
+msgstr "Registres"
+
 msgctxt "field:aeat.115.report,result:"
 msgid "Result"
 msgstr "Resultat"
@@ -121,6 +129,30 @@ msgstr "Base de retencions i ingressos"
 msgctxt "field:aeat.115.report,year:"
 msgid "Year"
 msgstr "Any"
+
+msgctxt "field:aeat.115.report.register,amount:"
+msgid "Amount"
+msgstr "Import"
+
+msgctxt "field:aeat.115.report.register,company:"
+msgid "Company"
+msgstr "Companyia"
+
+msgctxt "field:aeat.115.report.register,currency:"
+msgid "Currency"
+msgstr "Moneda"
+
+msgctxt "field:aeat.115.report.register,invoices:"
+msgid "Invoices"
+msgstr "Factures"
+
+msgctxt "field:aeat.115.report.register,party:"
+msgid "Party"
+msgstr "Tercer"
+
+msgctxt "field:aeat.115.report.register,report:"
+msgid "AEAT 115 Report"
+msgstr "Informe AEAT 115"
 
 msgctxt "field:aeat.115.template.mapping,aeat115_field:"
 msgid "Field"
@@ -154,6 +186,10 @@ msgctxt "model:aeat.115.report,name:"
 msgid "AEAT 115 Report"
 msgstr "Informe AEAT 115"
 
+msgctxt "model:aeat.115.report.register,name:"
+msgid "AEAT 115 Register"
+msgstr "Registre AEAT 115"
+
 msgctxt "model:aeat.115.template.mapping,name:"
 msgid "AEAT 115 TemplateTaxCode Mapping"
 msgstr "Mapeig plantilles codis d'impostos AEAT 115"
@@ -166,9 +202,13 @@ msgctxt "model:ir.action,name:act_aeat_115_report"
 msgid "AEAT 115 Report"
 msgstr "Informe AEAT 115"
 
-msgctxt "model:ir.message,text:msg_invalid_currency"
-msgid "Currency in AEAT 115 report \"%(name)s\" must be Euro."
-msgstr "La moneda de l'informe AEAT 115 \"%(name)s\" ha de ser l'euro."
+msgctxt "model:ir.message,text:msg_draft_cancel_invoice_in_115report"
+msgid ""
+"The invoice \"%(invoice)s\" cannot be changed to cancel or draft becasue is "
+"in a AEAT115 report \"%(report)s\"."
+msgstr ""
+"La factura \"%(invoice)s\" no es pot cancel·lar o passar a esborrany perquè "
+"es troba en un informe AEAT115 \"%(report)s\"."
 
 msgctxt "model:ir.model.button,string:aeat_115_report_calculate_button"
 msgid "Calculate"
@@ -305,6 +345,14 @@ msgstr "Informació bancària"
 msgctxt "view:aeat.115.report:"
 msgid "Complementary"
 msgstr "Complementari"
+
+msgctxt "view:aeat.115.report:"
+msgid "General"
+msgstr "General"
+
+msgctxt "view:aeat.115.report:"
+msgid "Registers"
+msgstr "Registres"
 
 msgctxt "view:aeat.115.report:"
 msgid "Result"

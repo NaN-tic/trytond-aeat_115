@@ -14,29 +14,36 @@ contains the full copyright notices and license terms. -->
     <label name="period"/>
     <field name="period"/>
 
-    <separator id="aeat115" string="Settlement" colspan="6"/>
-    <label name="parties" colspan="5"/>
-    <field name="parties"/>
-    <label name="withholdings_payments_base" colspan="5"/>
-    <field name="withholdings_payments_base"/>
-    <label name="withholdings_payments_amount" colspan="5"/>
-    <field name="withholdings_payments_amount"/>
+    <notebook colspan="6">
+        <page string="General" id="general" col="6">
+            <separator id="aeat115" string="Settlement" colspan="6"/>
+            <label name="parties" colspan="5"/>
+            <field name="parties"/>
+            <label name="withholdings_payments_base" colspan="5"/>
+            <field name="withholdings_payments_base"/>
+            <label name="withholdings_payments_amount" colspan="5"/>
+            <field name="withholdings_payments_amount"/>
 
-    <separator id="result" string="Result" colspan="6"/>
-    <label name="to_deduce" colspan="5"/>
-    <field name="to_deduce"/>
-    <label name="result" colspan="5"/>
-    <field name="result"/>
+            <separator id="result" string="Result" colspan="6"/>
+            <label name="to_deduce" colspan="5"/>
+            <field name="to_deduce"/>
+            <label name="result" colspan="5"/>
+            <field name="result"/>
 
-    <separator id="complementary" string="Complementary" colspan="6"/>
-    <label name="complementary_declaration"/>
-    <field name="complementary_declaration" colspan="2"/>
-    <label name="previous_declaration_receipt"/>
-    <field name="previous_declaration_receipt" colspan="2"/>
+            <separator id="complementary" string="Complementary" colspan="6"/>
+            <label name="complementary_declaration"/>
+            <field name="complementary_declaration" colspan="2"/>
+            <label name="previous_declaration_receipt"/>
+            <field name="previous_declaration_receipt" colspan="2"/>
 
-    <separator id="bank" string="Bank Information" colspan="6"/>
-    <label name="bank_account"/>
-    <field name="bank_account" colspan="5"/>
+            <separator id="bank" string="Bank Information" colspan="6"/>
+            <label name="bank_account"/>
+            <field name="bank_account" colspan="5"/>
+        </page>
+        <page string="Registers" id="registers" col="6">
+            <field name="registers" colspan="6"/>
+        </page>
+    </notebook>
 
     <separator id="115footer" colspan="6"/>
     <group id="state" colspan="3" col="6">

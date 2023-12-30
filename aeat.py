@@ -3,16 +3,15 @@ from decimal import Decimal
 import datetime
 import calendar
 import unicodedata
-import sys
 
 from retrofix import aeat115
 from retrofix.record import Record, write as retrofix_write
 from trytond.model import Workflow, ModelSQL, ModelView, fields, Unique
 from trytond.pool import Pool, PoolMeta
 from trytond.pyson import Eval, Bool, If
-from trytond.i18n import gettext
 from trytond.exceptions import UserError
 from trytond.transaction import Transaction
+from trytond.modules.currency.fields import Monetary
 
 
 _DEPENDS = ['state']
@@ -268,6 +267,8 @@ class Report(Workflow, ModelSQL, ModelView):
                     ],
                 ('parties', '=', 0)),
             ])
+    registers = fields.One2Many('aeat.115.report.register', 'report',
+        'Registers', readonly=True)
     withholdings_payments_base = fields.Numeric(
         'Withholding and Payments Base', digits=(15, 2))
     withholdings_payments_amount = fields.Numeric('Withholding and Payments',
@@ -385,6 +386,9 @@ class Report(Workflow, ModelSQL, ModelView):
         if company_id:
             return Company(company_id).party.id
 
+    def get_rec_name(self, name):
+        return '%s - %s' % (self.year, self.period)
+
     @fields.depends('company')
     def on_change_with_company_party(self, name=None):
         if self.company:
@@ -423,6 +427,7 @@ class Report(Workflow, ModelSQL, ModelView):
         Tax = pool.get('account.tax')
         TaxLine = pool.get('account.tax.line')
         Invoice = pool.get('account.invoice')
+        Register = pool.get('aeat.115.report.register')
 
         for report in reports:
             mapping = {}
@@ -452,7 +457,7 @@ class Report(Workflow, ModelSQL, ModelView):
             for field in mapping.values():
                 setattr(report, field, _ZERO)
 
-            parties = set()
+            registers = {}
             with Transaction().set_context(periods=periods):
                 for code in TaxCode.browse(mapping.keys()):
                     value = getattr(report, mapping[code.id])
@@ -460,8 +465,10 @@ class Report(Workflow, ModelSQL, ModelView):
                     setattr(report, mapping[code.id], abs(amount))
 
                     # To count the numebr of parties we have to do it from the
-                    # party in the realted moves of all codes used for the
+                    # party in the related moves of all codes used for the
                     # amount calculation
+                    # It is expected TaxCode was created from invoices, not
+                    # manually.
                     children = []
                     childs = TaxCode.search([
                             ('parent', 'child_of', [code]),
@@ -484,8 +491,21 @@ class Report(Workflow, ModelSQL, ModelView):
                             if (tax_line.move_line and tax_line.move_line.move
                                     and isinstance(tax_line.move_line.move.origin,
                                         Invoice)):
-                                parties.add(tax_line.move_line.move.origin.party)
-            report.parties = len(parties) if parties else 0
+                                invoice = tax_line.move_line.move.origin
+                                party = invoice.party
+                                if party in registers:
+                                    registers[party].amount += abs(tax_line.amount)
+                                    registers[party].invoices += (invoice,)
+                                else:
+                                    register = Register()
+                                    register.report = report
+                                    register.party = party
+                                    register.amount = abs(tax_line.amount)
+                                    register.invoices = (invoice,)
+                                    registers[party] = register
+            if registers:
+                Register.save(registers.values())
+            report.parties = len(registers) if registers else 0
             report.save()
 
         cls.write(reports, {
@@ -509,7 +529,10 @@ class Report(Workflow, ModelSQL, ModelView):
     @ModelView.button
     @Workflow.transition('draft')
     def draft(cls, reports):
-        pass
+        registers = [register for report in reports
+            for register in report.registers]
+        if registers:
+            Register.delete(registers)
 
     def create_file(self):
         header = Record(aeat115.HEADER_RECORD)
@@ -541,3 +564,39 @@ class Report(Workflow, ModelSQL, ModelView):
             data = data.encode('iso-8859-1')
         self.file_ = self.__class__.file_.cast(data)
         self.save()
+
+
+class Register(ModelSQL, ModelView):
+    """
+    AEAT 115 Register
+    """
+    __name__ = 'aeat.115.report.register'
+
+    company = fields.Function(fields.Many2One('company.company', 'Company'),
+        'on_change_with_company', searcher='search_company')
+    report = fields.Many2One('aeat.115.report', 'AEAT 115 Report')
+    party = fields.Many2One(
+        'party.party', 'Party',
+        context={
+            'company': Eval('company', -1),
+            },
+        depends={'company'})
+    currency = fields.Function(fields.Many2One('currency.currency', 'Currency'),
+        'on_change_with_currency')
+    amount = Monetary("Amount", currency='currency', digits='currency')
+    invoices = fields.One2Many('account.invoice', 'aeat115_register',
+        'Invoices', readonly=True)
+
+    @fields.depends('report', '_parent_report.company')
+    def on_change_with_company(self, name=None):
+        return (self.report and self.report.company
+            and self.report.company.id or None)
+
+    @classmethod
+    def search_company(cls, name, clause):
+        return [('report.%s' % name,) + tuple(clause[1:])]
+
+    @fields.depends('report', '_parent_report.currency')
+    def on_change_with_currency(self, name=None):
+        return (self.report and self.report.currency
+            and self.report.currency.id or None)
