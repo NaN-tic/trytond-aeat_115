@@ -214,7 +214,7 @@ class Report(Workflow, ModelSQL, ModelView):
     company = fields.Many2One('company.company', 'Company', required=True,
         states={
             'readonly': Eval('state').in_(['done', 'calculated']),
-            }, depends=['state'])
+            })
     currency = fields.Function(fields.Many2One('currency.currency',
         'Currency'), 'get_currency')
 
@@ -226,7 +226,7 @@ class Report(Workflow, ModelSQL, ModelView):
             ('N', 'Negative'),
             ], 'Declaration Type', required=True, sort=False, states={
                 'readonly': Eval('state') == 'done',
-            }, depends=_DEPENDS)
+            })
     company_vat = fields.Char('VAT')
     company_surname = fields.Char('Company Surname')
     company_name = fields.Char('Company Name')
@@ -237,7 +237,7 @@ class Report(Workflow, ModelSQL, ModelView):
             ],
         states={
             'readonly': Eval('state').in_(['done', 'calculated']),
-            }, depends=_DEPENDS)
+            })
     period = fields.Selection([
             ('1T', 'First quarter'),
             ('2T', 'Second quarter'),
@@ -257,7 +257,7 @@ class Report(Workflow, ModelSQL, ModelView):
             ('12', 'December'),
             ], 'Period', required=True, sort=False, states={
                 'readonly': Eval('state').in_(['done', 'calculated']),
-                }, depends=_DEPENDS)
+                })
     parties = fields.Integer("Parties",
         domain=[
             If(Eval('withholdings_payments_amount', 0) != 0,
@@ -283,17 +283,17 @@ class Report(Workflow, ModelSQL, ModelView):
     previous_declaration_receipt = fields.Char('Previous Declaration Receipt',
         size=13, states={
             'required': Bool(Eval('complementary_declaration')),
-            }, depends=['complementary_declaration'])
+            })
     company_party = fields.Function(fields.Many2One('party.party',
             'Company Party', context={
                 'company': Eval('company', -1),
-            }, depends=['company']), 'on_change_with_company_party')
+            }), 'on_change_with_company_party')
     bank_account = fields.Many2One('bank.account', 'Bank Account',
         domain=[
             ('owners', '=', Eval('company_party')),
             ], states={
             'required': Eval('type').in_(['U', 'D', 'X']),
-            }, depends=['company_party', 'type'])
+            })
 
     # Footer
     state = fields.Selection([
