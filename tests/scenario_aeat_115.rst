@@ -144,7 +144,10 @@ Create invoices::
     >>> line.product = product
     >>> line.quantity = 1
     >>> line.unit_price = Decimal('700')
-    >>> invoice.click('post')
+    >>> invoice.click('post') # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+        ...
+    InvoiceTaxesWarning: ...
     >>> invoice.total_amount
     Decimal('714.00')
     >>> Invoice = Model.get('account.invoice')
@@ -156,7 +159,10 @@ Create invoices::
     >>> line.product = product
     >>> line.quantity = 1
     >>> line.unit_price = Decimal('500')
-    >>> invoice.click('post')
+    >>> invoice.click('post') # doctest: +IGNORE_EXCEPTION_DETAIL
+    Traceback (most recent call last):
+        ...
+    InvoiceTaxesWarning: ...
     >>> invoice.total_amount
     Decimal('510.00')
 
