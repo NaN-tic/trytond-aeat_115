@@ -16,11 +16,13 @@ Imports::
     ...     create_chart, get_accounts, create_fiscalyear)
     >>> from trytond.modules.account_invoice.tests.tools import \
     ...     set_fiscalyear_invoice_sequences
+    >>> from trytond.modules.account_invoice.exceptions import InvoiceTaxesWarning
     >>> today = datetime.date.today()
 
 Activate modules::
 
     >>> config = activate_modules(['aeat_115', 'account_es', 'account_invoice'])
+    >>> Warning = Model.get('res.user.warning')
 
 Create company::
 
@@ -144,10 +146,18 @@ Create invoices::
     >>> line.product = product
     >>> line.quantity = 1
     >>> line.unit_price = Decimal('700')
-    >>> invoice.click('post') # doctest: +IGNORE_EXCEPTION_DETAIL
+    >>> try:
+    ...     invoice.click('post')
+    ... except InvoiceTaxesWarning as warning:
+    ...     _, (key, *_) = warning.args
+    ...     raise
     Traceback (most recent call last):
         ...
     InvoiceTaxesWarning: ...
+    >>> Warning(user=config.user, name=key).save()
+    >>> invoice.click('post')
+    >>> invoice.state
+    'posted'
     >>> invoice.total_amount
     Decimal('714.00')
     >>> Invoice = Model.get('account.invoice')
@@ -159,10 +169,18 @@ Create invoices::
     >>> line.product = product
     >>> line.quantity = 1
     >>> line.unit_price = Decimal('500')
-    >>> invoice.click('post') # doctest: +IGNORE_EXCEPTION_DETAIL
+    >>> try:
+    ...     invoice.click('post')
+    ... except InvoiceTaxesWarning as warning:
+    ...     _, (key, *_) = warning.args
+    ...     raise
     Traceback (most recent call last):
         ...
     InvoiceTaxesWarning: ...
+    >>> Warning(user=config.user, name=key).save()
+    >>> invoice.click('post')
+    >>> invoice.state
+    'posted'
     >>> invoice.total_amount
     Decimal('510.00')
 
