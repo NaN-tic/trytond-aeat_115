@@ -146,15 +146,6 @@ Create invoices::
     >>> line.product = product
     >>> line.quantity = 1
     >>> line.unit_price = Decimal('700')
-    >>> try:
-    ...     invoice.click('post')
-    ... except InvoiceTaxesWarning as warning:
-    ...     _, (key, *_) = warning.args
-    ...     raise
-    Traceback (most recent call last):
-        ...
-    InvoiceTaxesWarning: ...
-    >>> Warning(user=config.user, name=key).save()
     >>> invoice.click('post')
     >>> invoice.state
     'posted'
@@ -169,15 +160,6 @@ Create invoices::
     >>> line.product = product
     >>> line.quantity = 1
     >>> line.unit_price = Decimal('500')
-    >>> try:
-    ...     invoice.click('post')
-    ... except InvoiceTaxesWarning as warning:
-    ...     _, (key, *_) = warning.args
-    ...     raise
-    Traceback (most recent call last):
-        ...
-    InvoiceTaxesWarning: ...
-    >>> Warning(user=config.user, name=key).save()
     >>> invoice.click('post')
     >>> invoice.state
     'posted'
