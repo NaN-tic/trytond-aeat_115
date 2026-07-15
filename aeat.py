@@ -532,7 +532,7 @@ class Report(Workflow, ModelSQL, ModelView):
         registers = [register for report in reports
             for register in report.registers]
         if registers:
-            Register.delete(registers)
+            cls.delete(registers)
 
     def create_file(self):
         header = Record(aeat115.HEADER_RECORD)
